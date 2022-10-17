@@ -1,0 +1,32 @@
+{
+  "index_patterns": [
+      "product_*"
+    ],
+  "template": {
+    "mappings": {
+      "dynamic": "strict",
+      "properties": {
+        "productId": {
+          "type": "text"
+        },
+        "productCategory": {
+          "type": "text"
+        },
+        "OrderStats": {
+          "type": "object",
+          "properties": {
+            "orderCount": {
+              "type": "integer"
+            },
+            "minPrice": {
+              "type": "float"
+            },
+            "maxPrice": {
+              "type": "float"
+            }
+          }
+        }
+      }
+    }
+  }
+}
